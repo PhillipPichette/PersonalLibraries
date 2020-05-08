@@ -1,0 +1,389 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /*Layout*/
+    display: flex;
+    justify-content: center;
+
+    /*Decoration*/
+    background-color: black;
+    background-image: url(bg01.jpg);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+.AboutMeDiv, .InfluencesDiv, .ContactDiv{
+    box-shadow: 5px 5px;
+}
+
+  /********************/
+ /*#region NAV BAR   */
+/********************/
+
+.NavBarDiv{
+    /*Layout*/
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    justify-content: center;
+    /*Colours*/
+    background-color: #000;
+    color: rgb(148, 148, 148);
+    /*Text Decoration*/
+    font-size: 18px;
+    line-height: .8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 18px;
+    width: 100%;
+
+    position: relative;
+}
+
+li{
+    padding-left: 20px;
+    padding-Right: 20px;
+}
+
+.blue li a{
+    display: block;
+    text-decoration: none;
+    color: blue;
+}
+
+.orange li a{
+    display: block;
+    text-decoration: none;
+    color: orangered;
+}
+
+.green li a{
+    display: block;
+    text-decoration: none;
+    color: green;
+}
+
+.blue #curr, .NavBarDiv .blue li a:hover{
+    color: rgb(0, 183, 255);
+}
+
+.orange #curr, .NavBarDiv .orange li a:hover{
+    color: orange;
+}
+
+.green #curr, .NavBarDiv .green li a:hover{
+    color: rgb(9, 255, 0);
+}
+
+#insta{
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+    float: right;
+    right: 0;
+    padding-right: 0px;
+}
+
+.InstagramSvg{
+    height: 20px;
+    width: 20px;
+}
+
+.BlueLogo{
+    fill: blue;
+}
+
+.BlueLogo:hover{
+    fill: rgb(0, 183, 255);
+}
+
+.OrangeLogo{
+    fill: orangered;
+}
+
+.OrangeLogo:hover{
+    fill: orange;
+}
+
+.GreenLogo{
+    fill: green;
+}
+
+.GreenLogo:hover{
+    fill: rgb(9, 255, 0);
+}
+
+  /********************/
+ /*#endregion        */
+/********************/
+
+  /********************/
+ /*#region    NAME   */
+/********************/
+
+.NameDiv{
+    /*Layout*/
+    display: inline-block;
+    justify-content: center;
+    margin-top: 45px;
+    width: 100%;
+    height: 99px;
+    position: fixed;
+    z-index: -1;
+    /*Decoration*/
+    background-color: #3b3b3b;
+    color: #a6a6a6;
+    border-bottom-style: outset;
+    border-bottom-width: 5px;
+}
+
+.BlueName{
+    border-bottom-color: rgb(0, 183, 255);
+}
+
+.GreenName{
+    border-bottom-color: rgb(9, 255, 0);
+}
+
+.OrangeName{
+    border-bottom-color: orange;
+}
+
+.NameDiv a{
+    /*Layout*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    font-family: Bree serif;
+    text-transform: uppercase;
+    font-size: 61px;
+}
+  /********************/
+ /*#endregion        */
+/********************/
+
+  /********************/
+ /*#region  ABOUT ME */
+/********************/
+
+.AboutMeDiv{
+    /*Layout*/
+    width: 900px;
+    height: 100%;
+    margin: 144px;
+    padding: 20px;
+    
+    /*Decoration*/
+    background-color: white;
+    
+}
+
+#AboutMeTitle{
+    /*Layout*/
+    display: flex;
+    justify-content: center;
+    
+    /*Decoration*/
+    text-align: center;
+    font-size: 70px;
+}
+
+#AboutMeSchoolInfo, #AboutMePersonalInfo{
+
+    /*Layout*/
+    justify-content: center;
+    margin-bottom: 20px;
+
+    /*Decoration*/
+    font-size: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+  /********************/
+ /*#endregion        */
+/********************/
+
+  /********************/
+ /*#region  CONTACT  */
+/********************/
+
+.ContactDiv{
+    /*Layout*/
+    width: 900px;
+    height: 100%;
+    margin: 144px;
+    padding: 20px;
+    
+
+    /*Decoration*/
+    background-color: white;
+    
+}
+
+.ContactTitle{
+    /*Layout*/
+    display: flex;
+    justify-content: center;
+    
+    /*Decoration*/
+    text-align: center;
+    font-size: 70px;
+}
+
+form{
+    display: grid;
+    grid-template-areas:
+    'fname fnameform'
+    'lname lnameform'
+    'email emailform'
+    'phone phoneform'
+    'preferance preferanceform'
+    'province provinceform'
+    'message message'
+    'messageform messageform';
+    
+
+}
+form *{
+    font-size: 20px;
+    margin-top: 10px;
+}
+label{
+    margin-top: 10px;
+}
+
+#fnamelabel{grid-area: fname;}
+#fname{grid-area:fnameform;}
+#lnamelabel{grid-area:lname;}
+#lname{grid-area:lnameform;}
+#emaillabel{grid-area:email;}
+#email{grid-area:emailform;}
+#phonelabel{grid-area:phone;}
+#phone{grid-area:phoneform;}
+#preferancelabel{grid-area:preferance;}
+#preferance{
+    grid-area:preferanceform;
+    display: flex;
+    flex-direction: column;
+}
+#preferance *{
+    margin-top: 0px;
+}
+#provincelabel{grid-area:province;}
+#province{grid-area:provinceform}
+#messagelabel{grid-area:message;}
+#message{
+    grid-area:messageform;
+    width: 100%;
+    height: 250px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+#fname, #lname, #email, #phone{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit]{
+    background-color: black;
+    color: rgb(9, 255, 0);
+    border-style: outset;
+    border-width: 2px;
+    border-color: grey;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100px;
+}
+
+input[type=submit]:hover{
+    color: green;
+}
+
+  /********************/
+ /*#endregion        */
+/********************/
+
+  /********************/
+ /*#region INFLUENCES*/
+/********************/
+
+.InfluencesDiv{
+    /*Layout*/
+    width: 900px;
+    height: 100%;
+    margin: 144px;
+    padding: 20px;
+    
+    display: grid;
+    /*grid-template-rows: 1fr 1fr;*/
+    grid-template-areas:
+    'title title' 
+    'image1 influence1'
+    'influence2 image2'
+    'image3 influence3'
+    'influence4 image4';
+
+    /*Decoration*/
+    background-color: white;
+    
+}
+
+#influence1, #influence2, #influence3, #influence4, #imagediv1, #imagediv2, #imagediv3, #imagediv4{
+    width:430px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+#influence1{grid-area:influence1;}
+#influence2{grid-area:influence2;}
+#influence3{grid-area:influence3;}
+#influence4{grid-area:influence4;}
+#imagediv1{grid-area:image1;}
+#imagediv2{grid-area:image2;}
+#imagediv3{grid-area:image3;}
+#imagediv4{grid-area:image4;}
+#InfluencesTitle{
+    grid-area: title;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+}
+
+#image1, #image2, #image3, #image4{width: 100%}
+#influence1, #influence3{
+    display: inline-block;
+    text-align: end;
+}
+
+#projectlink{
+    text-decoration: none;
+    color: orangered;
+}
+
+
+  /********************/
+ /*#endregion        */
+/********************/
