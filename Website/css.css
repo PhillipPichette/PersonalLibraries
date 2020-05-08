@@ -89,7 +89,7 @@ li{
     color: rgb(9, 255, 0);
 }
 
-#insta{
+#insta, #github{
     display: flex;
     align-items: center;
 
@@ -97,6 +97,10 @@ li{
     float: right;
     right: 0;
     padding-right: 0px;
+}
+
+#github{
+    margin-right: 30px;
 }
 
 .InstagramSvg{
